@@ -4,12 +4,11 @@ This documentation goes through the different ways to implement dev console widg
 
 Dev console widget is a web component built with [litjs](https://lit.dev/).
 
-![Figma](./assets/dev-console-widget.png ":size=250")
+![Figma](./assets/dev-console-widget.png ":size=500")
 
 <hr>
 
 ## Application Bundles Breakdown
-
 #### Gateway Script
 
 https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js
@@ -24,7 +23,7 @@ Application host will inject the gateway script in the header which will in turn
 ```
 Add in attributes ```es5``` and ```polyfills``` to inject the ```es5``` version of bundled script and relevant polyfills. They are **optional**.
 
-We recommend using ```non es5``` script if you do not plan to support older browsers.
+We recommend not including them if your application do not plan to support older browsers.
 
 Web component can be used in this manner:
 
@@ -81,13 +80,13 @@ Web component can be used in this manner:
 
 Currently this widget can be consumed by host application through a script tag and below are the guides for the integration.
 
-#### **Static Html**
+### **Static Html**
 
 Utilising with static html is relatively straight forward. Just add gateway script tag into file that is used everywhere within the application e.g layout.html etc.
 
 This will also work if you're utilising static html or server side rendered html together with a frontend javascript framework such as React or Vue. For details on client side script injection, refer to the portions below.
 
-#### **React Application**
+### **React Application**
 
 For SPA's, the gateway script tag should be injected in the ```useEffect``` method of ```navbar``` component or components of similar nature.
 
@@ -156,7 +155,7 @@ declare namespace JSX {
 }
 ```
 
-#### **Angular Application**
+### **Angular Application**
 
 Inject gateway script in ```index.html``` or relevant html files.
 
@@ -180,7 +179,7 @@ You will need to add ```CUSTOM_ELEMENTS_SCHEMA``` into the relevant application 
 ```
 You can then use the web component as per normal.
 
-#### **Vue Application**
+### **Vue Application**
 
 If you're building a SPA with Vue, the script tag will have to injected during runtime similar to React. This could be added in the ```created()``` lifecycle hook and cleanedup in ```beforeDestroy()``` hook.
 
