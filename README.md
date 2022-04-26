@@ -4,9 +4,8 @@ This documentation goes through the different ways to implement dev console widg
 
 Dev console widget is a web component built with [litjs](https://lit.dev/).
 
-![Figma](./assets/dev-console-widget.png ":size=500")
+![Figma](./assets/dev-console-widget.png ":size=100%")
 
-<hr>
 
 ## Application Bundles Breakdown
 #### Gateway Script
@@ -35,7 +34,6 @@ Web component can be used in this manner:
     activeColor="blue" --> active and hover color for icon
   ></dev-console-widget>
 ```
-<hr>
 
 ## Important Caveats
 
@@ -72,9 +70,6 @@ Web component can be used in this manner:
       </div>
   </div>
 ```
-
-
-<hr>
 
 ## Integration
 
