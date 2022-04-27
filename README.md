@@ -30,12 +30,20 @@ Web component can be used in this manner:
 
 ```html
   <dev-console-widget
-    iconColor="black" --> default icon color
-    iconWidth="24px"  --> icon width
-    iconHeight="24px" --> icon height
-    activeColor="blue" --> active and hover color for icon
+    iconColor="black" 
+    iconWidth="24px"  
+    iconHeight="24px" 
+    activeColor="blue" 
   ></dev-console-widget>
 ```
+
+|  props          | description  |  
+|---              |---           |
+|  iconColor      |  default icon color <br/> type: string <br />                     |  
+|  iconWidth      |  icon width <br/> type: string                                    |
+|  iconHeight     |  icon height <br/> type: string                                   |
+|  activeColor    |  active and hover color for icon <br /> type: string              |
+
 
 ## Important Caveats
 
@@ -85,9 +93,9 @@ This will also work if you're utilising static html or server side rendered html
 
 ### **React Application**
 
-For SPA's, the gateway script tag should be injected in the ```useEffect``` method of ```navbar``` component or components of similar nature.
+<!-- For SPA's, the gateway script tag should be injected in the ```useEffect``` method of ```navbar``` component or components of similar nature. -->
 
-```js
+<!-- ```js
 useEffect(() => {
   const script = document.createElement('script');
   script.async = true;
@@ -103,7 +111,23 @@ useEffect(() => {
     document.head.removeChild(script);
   };
 }, []);
+``` -->
+For SPA's, gateway script should be injected into ```index.html``` in ```public``` folder or whereever the entry file is located at.
+
+?> If you're using typescript, you will need to declare type in your respective *.d.ts file.
+
+Example below is declared in global.d.ts file.
+
+```ts
+declare namespace JSX {
+  interface IntrinsicElements {
+    'dev-console-widget': any;
+  }
+}
 ```
+
+You can then use the web component as a normal html tag like so : 
+
 ```html
 <div className="sgds-masthead">
   <a href="https://www.gov.sg" target="_blank">
@@ -138,19 +162,8 @@ useEffect(() => {
     </div>
   </div>
 ```
-You could also consider extracting this logic out into its own [hook](https://reactjs.org/docs/hooks-intro.html).
+<!-- You could also consider extracting this logic out into its own [hook](https://reactjs.org/docs/hooks-intro.html). -->
 
-?> If you're using typescript, you will need to declare type in your respective *.d.ts file.
-
-Example below is declared in global.d.ts file.
-
-```ts
-declare namespace JSX {
-  interface IntrinsicElements {
-    'dev-console-widget': any;
-  }
-}
-```
 
 ### **Angular Application**
 
@@ -178,11 +191,13 @@ You can then use the web component as per normal.
 
 ### **Vue Application**
 
-If you're building a SPA with Vue, the script tag will have to injected during runtime similar to React. This could be added in the ```created()``` lifecycle hook and cleanedup in ```beforeDestroy()``` hook.
+Web components work well with Vue. You just need to inject the script tag in entry file(s).
 
-!> I have not personally tried this out.
+<!-- If you're building a SPA with Vue, the script tag will have to injected during runtime similar to React. This could be added in the ```created()``` lifecycle hook and cleanedup in ```beforeDestroy()``` hook. -->
 
-```js
+<!-- !> I have not personally tried this out. -->
+
+<!-- ```js
 created(){
   const script = document.createElement('script');
   script.async = true;
@@ -200,4 +215,4 @@ beforeDestroy(){
 }
 ```
 
-You can also consider extracting this logic out into a composable using [composition api](https://vuejs.org/guide/extras/composition-api-faq.html).
+You can also consider extracting this logic out into a composable using [composition api](https://vuejs.org/guide/extras/composition-api-faq.html). -->
