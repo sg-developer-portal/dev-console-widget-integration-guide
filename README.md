@@ -12,15 +12,15 @@ Dev console widget is a web component built with [litjs](https://lit.dev/).
 ## Application Bundles Breakdown
 #### Gateway Script
 
-https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js
+https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js
 #### Web Component Scripts
-- https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-widget.bundle.js
-- https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-widget.es5.bundle.js
+- https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-widget.bundle.js
+- https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-widget.es5.bundle.js
 
 Application host will inject the gateway script in the header which will in turn inject the relevant web component scripts. Example:
 
 ```html
-<script type="module" id="dev-console-gateway" src="https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js" es5 polyfills></script> 
+<script type="module" id="dev-console-gateway" src="https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js" es5 polyfills></script> 
 ```
 Add in attributes ```es5``` and ```polyfills``` to inject the ```es5``` version of bundled script and relevant polyfills. They are **optional**.
 
@@ -104,7 +104,7 @@ useEffect(() => {
   // script.setAttribute('es5', '');
   // script.setAttribute('polyfills', '');
   script.src =
-    'https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js';
+    'https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js';
   document.head.appendChild(script);
 
   return () => {
@@ -206,7 +206,7 @@ created(){
   // script.setAttribute('es5', '');
   // script.setAttribute('polyfills', '');
   script.src =
-    'https://dev.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js';
+    'https://stg.assets.developer.tech.gov.sg/bundled-scripts/dev-console-gateway.bundle.js';
   document.head.appendChild(script);
 }
 ...
