@@ -46,6 +46,23 @@ Web component can be used in this manner:
 |  activeColor    | No. <br /> default : #0161AF | active and hover color for icon <br /> type: string     |
 |  variant        | No. <br /> default : both  | component can be used as mobile, desktop or both <br /> type: string <br /> **more info below in caveats** |
 
+## Script Environments
+
+Based on the environments that you are deploying your application to, you might want to inject different widget bundle scripts.
+
+We are serving the bundled scripts from 3 separate envs `dev` , `stg` and `prod`. Domains in the script url are prefixed with the env except for prod. For e.g
+
+### Prod
+`https://assets.developer.tech.gov.sg/...`
+
+### Env Specific
+`https://dev.assets.developer.tech.gov.sg/...`
+
+`https://stg.assets.developer.tech.gov.sg/...`
+
+On doc portal, we inject environment specific dev console widget bundle i.e doc portal's `dev` env will inject `https://dev.assets.developer.tech.gov.sg/...`, `stg` will inject `https://stg.assets.developer.tech.gov.sg/...` and `prod` will inject `https://assets.developer.tech.gov.sg/...`.
+
+Experimental changes to widget are, most of the time, pushed to `dev` and `stg`.
 
 ## Important Caveats
 
