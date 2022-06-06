@@ -6,7 +6,7 @@ Dev console widget is a web component built with [litjs](https://lit.dev/).
 
 ![Figma](./assets/dev-console-widget.png ":size=100%")
 
-![Figma Mobile](./assets/dev-console-widget-mobile.png ':size=40x250')
+![Figma Mobile](./assets/dev-console-widget-mobile.png ':size=50%')
 
 [Live Demo Here](https://docs.developer.tech.gov.sg/)
 ## Application Bundles Breakdown
