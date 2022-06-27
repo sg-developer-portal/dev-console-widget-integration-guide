@@ -2,9 +2,9 @@
 
 Dev console widget is a web component built with [litjs](https://lit.dev/). See widget [live](https://docs.developer.tech.gov.sg/) on doc portal.
 
-<!-- ![Figma](./assets/dev-console-widget.png ":size=100%")
+![Figma](./assets/dev-console-widget.png ":size=100%")
 
-![Figma Mobile](./assets/dev-console-widget-mobile.png ':size=50%') -->
+![Figma Mobile](./assets/dev-console-widget-mobile.png ':size=50%')
 
 ## How it Works
 
@@ -14,7 +14,7 @@ To give a brief breakdown of how the bundle scripts work together : <br/>
 
 Your application will inject the gateway script which will subsequently inject the latest version of actual widget web component script.
 
-To find out more about bundle scripts, attributes you can pass in to the scripts and the different script environments, read more in [`JS Bundle Breakdown`](./content/js-bundles-breakdown.md). Also, checkout [`Framework Integration`](./content/integration.md) to learn how dev console widget can be integrated with popular javascript frameworks.
+To find out more about bundle scripts, attributes you can pass in to the scripts and the different script environments, read more in `Javascript Bundles` section. Also, checkout `Framework Integration` to learn how dev console widget can be integrated with popular javascript frameworks.
 
 Widget is a web component and thus you will use it as a html tag as such : 
 ```html
@@ -25,9 +25,9 @@ Widget is a web component and thus you will use it as a html tag as such :
   iconHeight="24px"
   ></dev-console-widget>
 ```
-To learn more about available props, find out more in [`Widget Props`](./content/widget-props.md) and to learn more about styling, check out [`Style Customisation`](./content/style-customisation.md).
+To learn more about available props, find out more in `Widget Props` and to learn more about styling, check out `Style Customisation`.
 
-Lastly for important caveats to take note when implementing, read this [section](./content/important-caveats.md).
+Lastly for important caveats to take note when implementing, read the `Important Caveats` section.
 ## Quick Start
 
 Inject the script below in your application :
@@ -77,7 +77,7 @@ Then, use the widget in your application as such :
   </div>
 ```
 
-?> You may have noticed `is-hidden-touch` and `is-hidden-desktop` in the class list. Find out more in [`Important Caveats`](./content/important-caveats.md).
+?> You may have noticed `is-hidden-touch` and `is-hidden-desktop` in the class list. Find out more in `Important Caveats`.
 
 ## Widget Placement Guide
 
