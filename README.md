@@ -13,6 +13,7 @@ Dev console widget is a web component built with [litjs](https://lit.dev/).
 - [Live Demo](https://docs.developer.tech.gov.sg/)
 - [Technical Documentation](https://confluence.ship.gov.sg/display/DEV/Developer+Console+Widget?src=contextnavpagetreemode)
 - [Self Publishing Repository](https://github.com/GovTechSG/dev-console-products-info)
+- [telegram channel](https://t.me/+k87OuBm9MARkYjk1)
 
 ## Script Environments
 
