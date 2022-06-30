@@ -2,7 +2,7 @@
 
 This portion lists some dom events that are emitted by the widget that may be useful for host applications to listen to and execute callback functions.
 
-## **devConsoleWidgetToggle**
+## devConsoleWidgetToggle
 
 A custom event emitted into the dom when widget is opened and closed. Returns `true` when open and `false` when closed.
 

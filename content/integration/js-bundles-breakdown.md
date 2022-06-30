@@ -1,6 +1,6 @@
 # Javascript Bundles Breakdown
 
-![Gateway Script Flow](../assets/gateway-script-flow.png)
+![Gateway Script Flow](../../assets/gateway-script-flow.png)
 
 ## Gateway Script
 
